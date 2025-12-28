@@ -12,7 +12,7 @@ const pages = [
     title: "Navigation & Menus",
     href: "/navigation",
     description: "Navigation Menu, Dropdown Menu, Tabs",
-    color: "from-accent-500 to-accent-600",
+    color: "from-accent-300 to-accent-400",
     badge: "Page 2",
   },
   {
