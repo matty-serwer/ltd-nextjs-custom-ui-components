@@ -39,13 +39,13 @@ export default function Home() {
             <span className="mb-6 inline-block rounded-full bg-brand-100 px-4 py-1.5 text-sm font-medium text-brand-700">
             Component Showcase
         </span>
-            <h1 className="mb-6 text-5xl font-bold tracking-tight text-surface-950 md:text-6xl lg:text-7xl">
+            <h1 className="mb-6 text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl">
             shadcn/ui{" "}
             <span className="bg-gradient-to-r from-brand-500 to-accent-500 bg-clip-text text-transparent">
             Explorer
         </span>
             </h1>
-            <p className="mx-auto max-w-2xl text-lg text-surface-600 md:text-xl">
+            <p className="mx-auto max-w-2xl text-lg text-muted-foreground md:text-xl">
             A curated showcase of 13 shadcn/ui components organized into 4 themed pages.
             See how components work together to create cohesive user interfaces.
             </p>
@@ -53,17 +53,17 @@ export default function Home() {
 
             {/* Component Stats */}
             <div className="mx-auto mt-16 grid max-w-4xl gap-6 sm:grid-cols-3">
-            <div className="rounded-2xl border border-surface-200 bg-white/50 p-6 text-center backdrop-blur-sm">
-            <p className="text-4xl font-bold text-brand-600">13</p>
-            <p className="mt-1 text-sm text-surface-600">Components</p>
+            <div className="rounded-2xl border border-border bg-card/50 p-6 text-center backdrop-blur-sm">
+            <p className="text-4xl font-bold text-brand-500">13</p>
+            <p className="mt-1 text-sm text-muted-foreground">Components</p>
             </div>
-            <div className="rounded-2xl border border-surface-200 bg-white/50 p-6 text-center backdrop-blur-sm">
-            <p className="text-4xl font-bold text-accent-600">4</p>
-            <p className="mt-1 text-sm text-surface-600">Themed Pages</p>
+            <div className="rounded-2xl border border-border bg-card/50 p-6 text-center backdrop-blur-sm">
+            <p className="text-4xl font-bold text-accent-500">4</p>
+            <p className="mt-1 text-sm text-muted-foreground">Themed Pages</p>
             </div>
-            <div className="rounded-2xl border border-surface-200 bg-white/50 p-6 text-center backdrop-blur-sm">
-            <p className="text-4xl font-bold text-green-600">∞</p>
-            <p className="mt-1 text-sm text-surface-600">Possibilities</p>
+            <div className="rounded-2xl border border-border bg-card/50 p-6 text-center backdrop-blur-sm">
+            <p className="text-4xl font-bold text-green-500">∞</p>
+            <p className="mt-1 text-sm text-muted-foreground">Possibilities</p>
             </div>
             </div>
 
@@ -73,7 +73,7 @@ export default function Home() {
                 <Link
                 key={page.href}
                 href={page.href}
-                className="group relative overflow-hidden rounded-2xl border border-surface-200 bg-white transition-all duration-300 hover:border-surface-300 hover:shadow-lg"
+                className="group relative overflow-hidden rounded-2xl border border-border bg-card transition-all duration-300 hover:border-border/80 hover:shadow-lg"
                     >
                     {/* Gradient Header */}
                     <div className={`h-32 bg-gradient-to-br ${page.color}`}>
@@ -86,13 +86,13 @@ export default function Home() {
 
                     {/* Content */}
                     <div className="p-6">
-                    <h2 className="mb-2 text-xl font-semibold text-surface-900 group-hover:text-brand-600 transition-colors">
+                    <h2 className="mb-2 text-xl font-semibold text-foreground group-hover:text-brand-500 transition-colors">
                     {page.title}
                 </h2>
-                    <p className="text-surface-600">{page.description}</p>
+                    <p className="text-muted-foreground">{page.description}</p>
 
                     {/* Arrow */}
-                    <div className="mt-4 flex items-center gap-2 text-sm font-medium text-brand-600">
+                    <div className="mt-4 flex items-center gap-2 text-sm font-medium text-brand-500">
                     Explore components
                     <svg
                 className="h-4 w-4 transition-transform group-hover:translate-x-1"
@@ -115,7 +115,7 @@ export default function Home() {
 
             {/* Components List */}
             <div className="mx-auto mt-20 max-w-4xl">
-            <h2 className="mb-8 text-center text-2xl font-semibold text-surface-900">
+            <h2 className="mb-8 text-center text-2xl font-semibold text-foreground">
             All Components
         </h2>
             <div className="flex flex-wrap justify-center gap-3">
@@ -136,7 +136,7 @@ export default function Home() {
             ].map((component) => (
                 <span
                 key={component}
-                className="rounded-lg border border-surface-200 bg-white px-4 py-2 text-sm font-medium text-surface-700"
+                className="rounded-lg border border-border bg-card px-4 py-2 text-sm font-medium text-foreground"
                     >
                     {component}
                 </span>
@@ -145,7 +145,7 @@ export default function Home() {
             </div>
 
             {/* Footer */}
-            <footer className="mx-auto mt-20 max-w-4xl text-center text-sm text-surface-500">
+            <footer className="mx-auto mt-20 max-w-4xl text-center text-sm text-muted-foreground">
         <p>
           Built with{" "}
           <a href="https://ui.shadcn.com" className="text-brand-600 hover:underline">
