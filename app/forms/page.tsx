@@ -55,7 +55,7 @@ export default function FormsInputsPage() {
     }
 
     return (
-        <main className="page-wrapper bg-gradient-to-br from-surface-50 via-brand-50/30 to-surface-100">
+        <main className="page-wrapper bg-background from-surface-50 via-brand-50/30 to-surface-100">
             <Toaster richColors position="top-right" />
 
             {/* Page Header */}
@@ -258,10 +258,7 @@ export default function FormsInputsPage() {
 
                     <div>
                         <p className="variant-label">File Input</p>
-                        <Input
-                            type="file"
-                            className="cursor-pointer file:mr-4 file:rounded-md file:border-0 file:bg-brand-100 file:px-4 file:py-2 file:text-sm file:font-medium file:text-brand-700 hover:file:bg-brand-200"
-                        />
+                        <Input type="file" />
                     </div>
                 </div>
             </section>
@@ -294,7 +291,7 @@ export default function FormsInputsPage() {
                         <label className="mb-2 block text-sm font-medium text-surface-700">
                             Country
                         </label>
-                        <Select>
+                        <Select variant="primary">
                             <SelectTrigger>
                                 <SelectValue placeholder="Choose country" />
                             </SelectTrigger>

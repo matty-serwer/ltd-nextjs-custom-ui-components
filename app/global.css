@@ -54,9 +54,11 @@
     --spacing-22: 5.5rem;
 
     /* Border radius */
-    --radius-xl: 1rem;
-    --radius-2xl: 1.5rem;
-    --radius-3xl: 2rem;
+    --radius-md: 0.7rem;
+    --radius-lg: 1.1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+    --radius-3xl: 3rem;
 
     /* Shadows - softer, more diffuse */
     --shadow-soft:
