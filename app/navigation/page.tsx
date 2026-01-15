@@ -79,7 +79,7 @@ export default function NavigationPage() {
       </header>
 
       {/* Navigation Menu Section */}
-      <section className="showcase-section">
+      <section className="showcase-section relative z-10">
         <h2 className="section-title">Navigation Menu</h2>
         <p className="mb-8 text-muted-foreground">
           Full-featured navigation with mega-menu style dropdowns. Hover over items to see content panels.

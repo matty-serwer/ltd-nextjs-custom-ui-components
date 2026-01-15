@@ -1,12 +1,12 @@
+/*
+ * Tailwind CSS v4 Theme Reference
+ * This is the canonical example of how to structure themes in this project
+ * Source: shadcn/ui compatible Tailwind v4 theme structure
+ */
+
 @import "tailwindcss";
 
-/* ============================================
-   THEME CONFIGURATION - Tailwind CSS v4
-   Using @theme for CSS variable definitions
-   ============================================ */
-
-@theme {
-    /* Typography - Using distinctive fonts */
+:root {
     --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
     --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
@@ -62,50 +62,233 @@
     --color-surface-900: oklch(0.2 0.006 60);
     --color-surface-950: oklch(0.12 0.004 60);
 
-    /* Semantic colors for Tailwind utilities (light mode defaults) */
-    --color-background: var(--color-surface-50);
-    --color-foreground: var(--color-surface-950);
-    --color-card: var(--color-surface-50);
-    --color-card-foreground: var(--color-surface-950);
-    --color-primary: var(--color-brand-600);
-    --color-primary-foreground: var(--color-surface-50);
-    --color-secondary: var(--color-surface-200);
-    --color-secondary-foreground: var(--color-surface-900);
-    --color-muted: var(--color-surface-200);
-    --color-muted-foreground: var(--color-surface-600);
-    --color-accent: var(--color-accent-400);
-    --color-accent-foreground: var(--color-surface-50);
-    --color-destructive: var(--color-accent-500);
-    --color-destructive-foreground: var(--color-surface-50);
-    --color-border: var(--color-surface-300);
-    --color-input: var(--color-surface-300);
-    --color-ring: var(--color-brand-500);
-    --color-popover: var(--color-surface-50);
-    --color-popover-foreground: var(--color-surface-950);
+    /* Chart Colors */
+    --chart-1: var(--color-brand-500);
+    --chart-2: var(--color-accent-500);
+    --chart-3: oklch(0.7 0.15 160);
+    --chart-4: oklch(0.65 0.15 280);
+    --chart-5: oklch(0.72 0.16 80);
 
-    /* Dark mode overrides for semantic colors */
-    @media (prefers-color-scheme: dark) {
-        --color-background: var(--color-surface-950);
-        --color-foreground: var(--color-surface-50);
-        --color-card: var(--color-surface-900);
-        --color-card-foreground: var(--color-surface-50);
-        --color-primary: var(--color-brand-500);
-        --color-secondary: var(--color-surface-800);
-        --color-secondary-foreground: var(--color-surface-100);
-        --color-muted: var(--color-surface-800);
-        --color-muted-foreground: var(--color-surface-400);
-        --color-accent: var(--color-accent-pastel-500);
-        --color-destructive: var(--color-accent-pastel-600);
-        --color-border: var(--color-surface-700);
-        --color-input: var(--color-surface-800);
-        --color-ring: var(--color-brand-400);
-        --color-popover: var(--color-surface-900);
-        --color-popover-foreground: var(--color-surface-50);
+    /* Application Colors - Light Mode */
+    --background: var(--color-surface-50);
+    --foreground: var(--color-surface-950);
+    --card: var(--color-surface-50);
+    --card-foreground: var(--color-surface-950);
+    --primary: var(--color-brand-600);
+    --primary-foreground: var(--color-surface-50);
+    --secondary: var(--color-surface-200);
+    --secondary-foreground: var(--color-surface-900);
+    --muted: var(--color-surface-200);
+    --muted-foreground: var(--color-surface-600);
+    --accent: var(--color-accent-400);
+    --accent-foreground: var(--color-surface-50);
+    --destructive: var(--color-accent-500);
+    --destructive-foreground: var(--color-surface-50);
+    --border: var(--color-surface-300);
+    --input: var(--color-surface-300);
+    --ring: var(--color-brand-500);
+    --popover: var(--color-surface-50);
+    --popover-foreground: var(--color-surface-950);
+
+    /* Radius */
+    --radius: 0.625rem;
+
+    /* Sidebar */
+    --sidebar-background: var(--color-surface-100);
+    --sidebar-foreground: var(--color-surface-900);
+    --sidebar-primary: var(--color-brand-600);
+    --sidebar-primary-foreground: var(--color-surface-50);
+    --sidebar-accent: var(--color-accent-500);
+    --sidebar-accent-foreground: var(--color-surface-50);
+    --sidebar-border: var(--color-surface-300);
+    --sidebar-ring: var(--color-brand-500);
+}
+
+.dark {
+    --background: var(--color-surface-950);
+    --foreground: var(--color-surface-50);
+    --card: var(--color-surface-900);
+    --card-foreground: var(--color-surface-50);
+    --primary: var(--color-brand-500);
+    --secondary: var(--color-surface-800);
+    --secondary-foreground: var(--color-surface-100);
+    --muted: var(--color-surface-800);
+    --muted-foreground: var(--color-surface-400);
+    --accent: var(--color-accent-pastel-500);
+    --destructive: var(--color-accent-pastel-600);
+    --border: var(--color-surface-700);
+    --input: var(--color-surface-800);
+    --ring: var(--color-brand-400);
+    --popover: var(--color-surface-900);
+    --popover-foreground: var(--color-surface-50);
+
+    /* Chart colors - adjusted for dark mode visibility */
+    --chart-1: var(--color-brand-400);
+    --chart-2: var(--color-accent-400);
+    --chart-3: oklch(0.75 0.15 160);
+    --chart-4: oklch(0.7 0.15 280);
+    --chart-5: oklch(0.77 0.16 80);
+
+    /* Sidebar */
+    --sidebar-background: var(--color-surface-900);
+    --sidebar-foreground: var(--color-surface-100);
+    --sidebar-primary: var(--color-brand-500);
+    --sidebar-primary-foreground: var(--color-surface-50);
+    --sidebar-accent: var(--color-accent-500);
+    --sidebar-accent-foreground: var(--color-surface-50);
+    --sidebar-border: var(--color-surface-700);
+    --sidebar-ring: var(--color-brand-400);
+}
+
+/* ============================================
+   CUSTOM CLASSES
+   ============================================ */
+
+.page-wrapper {
+    min-height: 100vh;
+    padding: 3rem 1.5rem;
+}
+
+.showcase-section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-2xl);
+    background-color: color-mix(in oklch, var(--color-card) 50%, transparent);
+    backdrop-filter: blur(4px);
+}
+
+.section-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: var(--color-foreground);
+}
+
+.demo-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.variant-label {
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-muted-foreground);
+}
+
+/* Responsive breakpoints */
+@media (min-width: 768px) {
+    .page-wrapper {
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
-    /* Spacing scale extensions */
-    --spacing-18: 4.5rem;
-    --spacing-22: 5.5rem;
+    .demo-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .page-wrapper {
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+
+    .demo-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@theme inline {
+    /* Brand Colors */
+    --color-brand-50: var(--color-brand-50);
+    --color-brand-100: var(--color-brand-100);
+    --color-brand-200: var(--color-brand-200);
+    --color-brand-300: var(--color-brand-300);
+    --color-brand-400: var(--color-brand-400);
+    --color-brand-500: var(--color-brand-500);
+    --color-brand-600: var(--color-brand-600);
+    --color-brand-700: var(--color-brand-700);
+    --color-brand-800: var(--color-brand-800);
+    --color-brand-900: var(--color-brand-900);
+    --color-brand-950: var(--color-brand-950);
+
+    /* Accent Colors */
+    --color-accent-50: var(--color-accent-50);
+    --color-accent-100: var(--color-accent-100);
+    --color-accent-200: var(--color-accent-200);
+    --color-accent-300: var(--color-accent-300);
+    --color-accent-400: var(--color-accent-400);
+    --color-accent-500: var(--color-accent-500);
+    --color-accent-600: var(--color-accent-600);
+    --color-accent-700: var(--color-accent-700);
+    --color-accent-800: var(--color-accent-800);
+    --color-accent-900: var(--color-accent-900);
+    --color-accent-950: var(--color-accent-950);
+
+    /* Accent Pastel Colors */
+    --color-accent-pastel-50: var(--color-accent-pastel-50);
+    --color-accent-pastel-100: var(--color-accent-pastel-100);
+    --color-accent-pastel-200: var(--color-accent-pastel-200);
+    --color-accent-pastel-300: var(--color-accent-pastel-300);
+    --color-accent-pastel-400: var(--color-accent-pastel-400);
+    --color-accent-pastel-500: var(--color-accent-pastel-500);
+    --color-accent-pastel-600: var(--color-accent-pastel-600);
+    --color-accent-pastel-700: var(--color-accent-pastel-700);
+    --color-accent-pastel-800: var(--color-accent-pastel-800);
+    --color-accent-pastel-900: var(--color-accent-pastel-900);
+    --color-accent-pastel-950: var(--color-accent-pastel-950);
+
+    /* Surface Colors */
+    --color-surface-50: var(--color-surface-50);
+    --color-surface-100: var(--color-surface-100);
+    --color-surface-200: var(--color-surface-200);
+    --color-surface-300: var(--color-surface-300);
+    --color-surface-400: var(--color-surface-400);
+    --color-surface-500: var(--color-surface-500);
+    --color-surface-600: var(--color-surface-600);
+    --color-surface-700: var(--color-surface-700);
+    --color-surface-800: var(--color-surface-800);
+    --color-surface-900: var(--color-surface-900);
+    --color-surface-950: var(--color-surface-950);
+
+    /* Chart Colors */
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+
+    /* Application Colors */
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-destructive-foreground: var(--destructive-foreground);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+
+    /* Typography */
+    --font-sans: var(--font-sans);
+    --font-mono: var(--font-mono);
 
     /* Border radius */
     --radius-md: 0.7rem;
@@ -114,7 +297,7 @@
     --radius-2xl: 2rem;
     --radius-3xl: 3rem;
 
-    /* Shadows - softer, more diffuse */
+    /* Shadows */
     --shadow-soft:
         0 2px 8px -2px oklch(0 0 0 / 0.08), 0 4px 16px -4px oklch(0 0 0 / 0.12);
     --shadow-medium:
@@ -132,150 +315,7 @@
     --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
     --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-
-
-/* ============================================
-   CSS VARIABLES FOR SHADCN COMPONENTS
-   Light mode (default)
-   ============================================ */
-
-:root {
-    color-scheme: light dark;
-
-    /* Background & Foreground */
-    --background: var(--color-surface-50);
-    --foreground: var(--color-surface-950);
-
-    /* Card */
-    --card: var(--color-surface-50);
-    --card-foreground: var(--color-surface-950);
-
-    /* Popover */
-    --popover: var(--color-surface-50);
-    --popover-foreground: var(--color-surface-950);
-
-    /* Primary - Using brand colors */
-    --primary: var(--color-brand-600);
-    --primary-foreground: var(--color-surface-50);
-
-    /* Secondary */
-    --secondary: var(--color-surface-200);
-    --secondary-foreground: var(--color-surface-900);
-
-    /* Muted */
-    --muted: var(--color-surface-200);
-    --muted-foreground: var(--color-surface-600);
-
-    /* Accent - Using coral */
-    --accent: var(--color-accent-400);
-    --accent-foreground: var(--color-surface-50);
-
-    /* Destructive */
-    --destructive: var(--color-accent-500);
-    --destructive-foreground: var(--color-surface-50);
-
-    /* Border & Input */
-    --border: var(--color-surface-300);
-    --input: var(--color-surface-300);
-    --ring: var(--color-brand-500);
-
-    /* Chart colors */
-    --chart-1: var(--color-brand-500);
-    --chart-2: var(--color-accent-500);
-    --chart-3: oklch(0.7 0.15 160);
-    --chart-4: oklch(0.65 0.15 280);
-    --chart-5: oklch(0.72 0.16 80);
-
-    /* Radius */
-    --radius: 0.625rem;
-
-    /* Sidebar */
-    --sidebar-background: var(--color-surface-100);
-    --sidebar-foreground: var(--color-surface-900);
-    --sidebar-primary: var(--color-brand-600);
-    --sidebar-primary-foreground: var(--color-surface-50);
-    --sidebar-accent: var(--color-accent-500);
-    --sidebar-accent-foreground: var(--color-surface-50);
-    --sidebar-border: var(--color-surface-300);
-    --sidebar-ring: var(--color-brand-500);
-}
-
-/* ============================================
-   DARK MODE - System preference
-   Using prefers-color-scheme media query
-   ============================================ */
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
-
-        /* Dark backgrounds - using very dark surface colors */
-        --background: var(--color-surface-950);
-        --foreground: var(--color-surface-50);
-
-        /* Cards - slightly lighter than background for elevation */
-        --card: var(--color-surface-900);
-        --card-foreground: var(--color-surface-50);
-
-        /* Popovers - elevated surfaces */
-        --popover: var(--color-surface-900);
-        --popover-foreground: var(--color-surface-50);
-
-        /* Primary - brighter brand color with light foreground for contrast */
-        --primary: var(--color-brand-500);
-        --primary-foreground: var(--color-surface-50);
-
-        /* Secondary - subtle background with good contrast */
-        --secondary: var(--color-surface-800);
-        --secondary-foreground: var(--color-surface-100);
-
-        /* Muted - for less prominent content */
-        --muted: var(--color-surface-800);
-        --muted-foreground: var(--color-surface-400);
-
-        /* Accent - pastel coral/pink for dark mode */
-        --accent: var(--color-accent-pastel-500);
-        --accent-foreground: var(--color-surface-50);
-
-        /* Destructive - pastel coral/pink for dark mode */
-        --destructive: var(--color-accent-pastel-600);
-        --destructive-foreground: var(--color-surface-50);
-
-        /* Borders - visible but subtle */
-        --border: var(--color-surface-700);
-        --input: var(--color-surface-800);
-        --ring: var(--color-brand-400);
-
-        /* Chart colors - adjusted for dark mode visibility */
-        --chart-1: var(--color-brand-400);
-        --chart-2: var(--color-accent-400);
-        --chart-3: oklch(0.75 0.15 160);
-        --chart-4: oklch(0.7 0.15 280);
-        --chart-5: oklch(0.77 0.16 80);
-
-        /* Sidebar */
-        --sidebar-background: var(--color-surface-900);
-        --sidebar-foreground: var(--color-surface-100);
-        --sidebar-primary: var(--color-brand-500);
-        --sidebar-primary-foreground: var(--color-surface-50);
-        --sidebar-accent: var(--color-accent-500);
-        --sidebar-accent-foreground: var(--color-surface-50);
-        --sidebar-border: var(--color-surface-700);
-        --sidebar-ring: var(--color-brand-400);
-    }
-}
-
-
-/* ============================================
-   BASE STYLES
-   ============================================ */
-
-/* *, */
-/* *::before, */
-/* *::after { */
-/*     border-color: var(--border); */
-/* } */
-
+/* direct css assignments */
 html {
     scroll-behavior: smooth;
 }
@@ -287,35 +327,11 @@ body {
     font-feature-settings: "ss01", "ss02", "cv01";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    letter-spacing: var(--tracking-normal);
 }
 
 /* Focus ring styles */
 :focus-visible {
     outline: 2px solid var(--ring);
     outline-offset: 2px;
-}
-
-/* ============================================
-   MINIMAL COMPONENT ABSTRACTIONS
-   Only for exact repeated patterns
-   ============================================ */
-
-.page-wrapper {
-    @apply min-h-screen px-6 py-12 md:px-12 lg:px-24;
-}
-
-.showcase-section {
-    @apply mb-16 rounded-2xl border border-border bg-card/50 p-8 backdrop-blur-sm;
-}
-
-.section-title {
-    @apply mb-6 text-2xl font-semibold tracking-tight text-foreground;
-}
-
-.demo-grid {
-    @apply grid gap-6 sm:grid-cols-2 lg:grid-cols-3;
-}
-
-.variant-label {
-    @apply mb-2 text-xs font-medium uppercase tracking-wider text-muted-foreground;
 }
