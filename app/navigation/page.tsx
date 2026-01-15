@@ -44,13 +44,13 @@ const ListItem = ({
         <a
           href={href}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-surface-100 hover:text-surface-900 focus:bg-surface-100 focus:text-surface-900",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-muted hover:text-foreground focus:bg-muted focus:text-foreground",
             className
           )}
           {...props}
         >
           <div className="text-sm font-medium leading-none">{title}</div>
-          <p className="line-clamp-2 text-sm leading-snug text-surface-500">
+          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
         </a>
@@ -69,23 +69,23 @@ export default function NavigationPage() {
         <span className="mb-4 inline-block rounded-full bg-accent-100 px-4 py-1.5 text-sm font-medium text-accent-700">
           Page 2 of 4
         </span>
-        <h1 className="mb-4 text-4xl font-bold tracking-tight text-surface-950 md:text-5xl">
+        <h1 className="mb-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
           Navigation & Menus
         </h1>
-        <p className="max-w-2xl text-lg text-surface-600">
+        <p className="max-w-2xl text-lg text-muted-foreground">
           Wayfinding components for site structure. See how navigation menus, dropdowns,
           and tabs create hierarchy and organize content access.
         </p>
       </header>
 
       {/* Navigation Menu Section */}
-      <section className="showcase-section">
+      <section className="showcase-section relative z-10">
         <h2 className="section-title">Navigation Menu</h2>
-        <p className="mb-8 text-surface-600">
+        <p className="mb-8 text-muted-foreground">
           Full-featured navigation with mega-menu style dropdowns. Hover over items to see content panels.
         </p>
 
-        <div className="flex justify-center rounded-lg border border-surface-200 bg-white p-6">
+        <div className="flex justify-center rounded-lg border border-border bg-card p-6">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -155,7 +155,7 @@ export default function NavigationPage() {
       {/* Dropdown Menu Section */}
       <section className="showcase-section">
         <h2 className="section-title">Dropdown Menus</h2>
-        <p className="mb-8 text-surface-600">
+        <p className="mb-8 text-muted-foreground">
           Context menus and action dropdowns with nested submenus, separators, and keyboard shortcuts.
         </p>
 
@@ -279,7 +279,7 @@ export default function NavigationPage() {
       {/* Tabs Section */}
       <section className="showcase-section">
         <h2 className="section-title">Tabs</h2>
-        <p className="mb-8 text-surface-600">
+        <p className="mb-8 text-muted-foreground">
           Organize content into switchable panels. Multiple styling approaches for different contexts.
         </p>
 
@@ -294,30 +294,30 @@ export default function NavigationPage() {
                 <TabsTrigger value="reports">Reports</TabsTrigger>
                 <TabsTrigger value="notifications">Notifications</TabsTrigger>
               </TabsList>
-              <TabsContent value="overview" className="mt-6 rounded-lg border border-surface-200 bg-white p-6">
+              <TabsContent value="overview" className="mt-6 rounded-lg border border-border bg-card p-6">
                 <h3 className="mb-2 text-lg font-semibold">Overview</h3>
-                <p className="text-surface-600">
+                <p className="text-muted-foreground">
                   Welcome to your dashboard. Here you&apos;ll find a summary of your account activity,
                   recent updates, and quick actions to manage your workspace.
                 </p>
               </TabsContent>
-              <TabsContent value="analytics" className="mt-6 rounded-lg border border-surface-200 bg-white p-6">
+              <TabsContent value="analytics" className="mt-6 rounded-lg border border-border bg-card p-6">
                 <h3 className="mb-2 text-lg font-semibold">Analytics</h3>
-                <p className="text-surface-600">
+                <p className="text-muted-foreground">
                   Track your performance metrics, user engagement, and growth trends over time.
                   Export reports or set up automated alerts.
                 </p>
               </TabsContent>
-              <TabsContent value="reports" className="mt-6 rounded-lg border border-surface-200 bg-white p-6">
+              <TabsContent value="reports" className="mt-6 rounded-lg border border-border bg-card p-6">
                 <h3 className="mb-2 text-lg font-semibold">Reports</h3>
-                <p className="text-surface-600">
+                <p className="text-muted-foreground">
                   Generate and download detailed reports. Schedule recurring reports to be sent
                   to your email or shared with team members.
                 </p>
               </TabsContent>
-              <TabsContent value="notifications" className="mt-6 rounded-lg border border-surface-200 bg-white p-6">
+              <TabsContent value="notifications" className="mt-6 rounded-lg border border-border bg-card p-6">
                 <h3 className="mb-2 text-lg font-semibold">Notifications</h3>
-                <p className="text-surface-600">
+                <p className="text-muted-foreground">
                   Manage your notification preferences. Choose what updates you want to receive
                   and how you want to be notified.
                 </p>
@@ -329,28 +329,28 @@ export default function NavigationPage() {
           <div>
             <p className="variant-label">Underline Style (Custom)</p>
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-              <TabsList className="h-auto w-full justify-start gap-6 rounded-none border-b border-surface-200 bg-transparent p-0">
+              <TabsList className="h-auto w-full justify-start gap-6 rounded-none border-b border-border bg-transparent p-0">
                 {["overview", "features", "pricing", "faq"].map((tab) => (
                   <TabsTrigger
                     key={tab}
                     value={tab}
-                    className="relative rounded-none border-b-2 border-transparent bg-transparent px-0 pb-3 pt-2 font-medium text-surface-500 shadow-none transition-none data-[state=active]:border-brand-600 data-[state=active]:text-brand-600 data-[state=active]:shadow-none"
+                    className="relative rounded-none border-b-2 border-transparent bg-transparent px-0 pb-3 pt-2 font-medium text-muted-foreground shadow-none transition-none data-[state=active]:border-primary data-[state=active]:text-primary data-[state=active]:shadow-none"
                   >
                     {tab.charAt(0).toUpperCase() + tab.slice(1)}
                   </TabsTrigger>
                 ))}
               </TabsList>
               <TabsContent value="overview" className="mt-6">
-                <p className="text-surface-600">Overview content with underline tab style.</p>
+                <p className="text-muted-foreground">Overview content with underline tab style.</p>
               </TabsContent>
               <TabsContent value="features" className="mt-6">
-                <p className="text-surface-600">Features content with underline tab style.</p>
+                <p className="text-muted-foreground">Features content with underline tab style.</p>
               </TabsContent>
               <TabsContent value="pricing" className="mt-6">
-                <p className="text-surface-600">Pricing content with underline tab style.</p>
+                <p className="text-muted-foreground">Pricing content with underline tab style.</p>
               </TabsContent>
               <TabsContent value="faq" className="mt-6">
-                <p className="text-surface-600">FAQ content with underline tab style.</p>
+                <p className="text-muted-foreground">FAQ content with underline tab style.</p>
               </TabsContent>
             </Tabs>
           </div>
@@ -364,23 +364,23 @@ export default function NavigationPage() {
                   <TabsTrigger
                     key={tab}
                     value={tab}
-                    className="rounded-full border border-surface-200 bg-white px-4 py-2 text-surface-600 shadow-none data-[state=active]:border-brand-600 data-[state=active]:bg-brand-600 data-[state=active]:text-white"
+                    className="rounded-full border border-border bg-card px-4 py-2 text-muted-foreground shadow-none data-[state=active]:border-primary data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
                   >
                     {tab.charAt(0).toUpperCase() + tab.slice(1)}
                   </TabsTrigger>
                 ))}
               </TabsList>
               <TabsContent value="all" className="mt-6">
-                <p className="text-surface-600">Showing all items with pill tab style.</p>
+                <p className="text-muted-foreground">Showing all items with pill tab style.</p>
               </TabsContent>
               <TabsContent value="active" className="mt-6">
-                <p className="text-surface-600">Showing active items only.</p>
+                <p className="text-muted-foreground">Showing active items only.</p>
               </TabsContent>
               <TabsContent value="draft" className="mt-6">
-                <p className="text-surface-600">Showing draft items only.</p>
+                <p className="text-muted-foreground">Showing draft items only.</p>
               </TabsContent>
               <TabsContent value="archived" className="mt-6">
-                <p className="text-surface-600">Showing archived items only.</p>
+                <p className="text-muted-foreground">Showing archived items only.</p>
               </TabsContent>
             </Tabs>
           </div>
@@ -390,15 +390,15 @@ export default function NavigationPage() {
       {/* Combined Example */}
       <section className="showcase-section border-accent-200 bg-gradient-to-br from-accent-50/50 to-surface-50">
         <h2 className="section-title">Combined Navigation Pattern</h2>
-        <p className="mb-8 text-surface-600">
+        <p className="mb-8 text-muted-foreground">
           A realistic header showing navigation menu, dropdown, and tabs working together.
         </p>
 
-        <div className="overflow-hidden rounded-xl border border-surface-200 bg-white shadow-lg">
+        <div className="overflow-hidden rounded-xl border border-border bg-card shadow-lg">
           {/* Simulated Header */}
-          <header className="flex items-center justify-between border-b border-surface-200 px-6 py-4">
+          <header className="flex items-center justify-between border-b border-border px-6 py-4">
             <div className="flex items-center gap-8">
-              <span className="text-xl font-bold text-brand-600">Logo</span>
+              <span className="text-xl font-bold text-primary">Logo</span>
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
@@ -448,17 +448,17 @@ export default function NavigationPage() {
                 <TabsTrigger value="team">Team</TabsTrigger>
               </TabsList>
               <TabsContent value="dashboard" className="mt-4">
-                <div className="rounded-lg bg-surface-50 p-8 text-center text-surface-500">
+                <div className="rounded-lg bg-muted p-8 text-center text-muted-foreground">
                   Dashboard content area
                 </div>
               </TabsContent>
               <TabsContent value="projects" className="mt-4">
-                <div className="rounded-lg bg-surface-50 p-8 text-center text-surface-500">
+                <div className="rounded-lg bg-muted p-8 text-center text-muted-foreground">
                   Projects content area
                 </div>
               </TabsContent>
               <TabsContent value="team" className="mt-4">
-                <div className="rounded-lg bg-surface-50 p-8 text-center text-surface-500">
+                <div className="rounded-lg bg-muted p-8 text-center text-muted-foreground">
                   Team content area
                 </div>
               </TabsContent>
@@ -468,10 +468,10 @@ export default function NavigationPage() {
       </section>
 
       {/* Navigation Footer */}
-      <footer className="mt-16 flex items-center justify-between rounded-xl border border-surface-200 bg-surface-50 p-6">
+      <footer className="mt-16 flex items-center justify-between rounded-xl border border-border bg-card p-6">
         <a
           href="/forms"
-          className="inline-flex items-center gap-2 text-sm text-surface-600 transition-colors hover:text-surface-900"
+          className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
         >
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -480,7 +480,7 @@ export default function NavigationPage() {
         </a>
         <a
           href="/data-display"
-          className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-700"
+          className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
         >
           Next: Data Display
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

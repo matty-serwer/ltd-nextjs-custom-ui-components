@@ -63,10 +63,10 @@ export default function FormsInputsPage() {
                 <span className="mb-4 inline-block rounded-full bg-brand-100 px-4 py-1.5 text-sm font-medium text-brand-700">
                     Page 1 of 4
                 </span>
-                <h1 className="mb-4 text-4xl font-bold tracking-tight text-surface-950 md:text-5xl">
+                <h1 className="mb-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl">
                     Forms & Inputs
                 </h1>
-                <p className="max-w-2xl text-lg text-surface-600">
+                <p className="max-w-2xl text-lg text-muted-foreground">
                     Core data entry components working together. See how buttons
                     align with inputs, selects integrate with form fields, and
                     toast notifications provide feedback.
@@ -74,9 +74,9 @@ export default function FormsInputsPage() {
             </header>
 
             {/* Button Variants Section */}
-            <section className="showcase-section">
+            <section className="showcase-section bg-card">
                 <h2 className="section-title">Button Variants</h2>
-                <p className="mb-8 text-surface-600">
+                <p className="mb-8 text-muted-foreground">
                     Buttons in different states and sizes. Click any button to
                     trigger a toast notification.
                 </p>
@@ -323,7 +323,7 @@ export default function FormsInputsPage() {
             </section>
 
             {/* Complete Form Section */}
-            <section className="showcase-section border-brand-200 bg-gradient-to-br from-brand-50/50 to-surface-50">
+            <section className="showcase-section border-brand-200 bg-card from-brand-50/50 to-surface-50">
                 <h2 className="section-title">Complete Form Example</h2>
                 <p className="mb-8 text-surface-600">
                     All form components working together with validation and
@@ -439,7 +439,7 @@ export default function FormsInputsPage() {
             {/* Toast Examples Section */}
             <section className="showcase-section">
                 <h2 className="section-title">Toast Notifications (Sonner)</h2>
-                <p className="mb-8 text-surface-600">
+                <p className="mb-8 text-muted-foreground">
                     Different toast styles for various feedback scenarios.
                 </p>
 
@@ -515,11 +515,13 @@ export default function FormsInputsPage() {
             </section>
 
             {/* Navigation Footer */}
-            <footer className="mt-16 flex items-center justify-between rounded-xl border border-surface-200 bg-surface-50 p-6">
-                <span className="text-sm text-surface-500">Forms & Inputs</span>
+            <footer className="mt-16 flex items-center justify-between rounded-xl border border-border bg-card p-6">
+                <span className="text-sm text-muted-foreground">
+                    Forms & Inputs
+                </span>
                 <a
                     href="/navigation"
-                    className="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-700"
+                    className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
                 >
                     Next: Navigation & Menus
                     <svg
